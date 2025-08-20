@@ -13,4 +13,8 @@ function agregarAmigo() {
         alert("Solo se permiten letras y espacios.");
         return;
     }
+if (amigos.includes(nombre)) {
+        alert("El nombre '" + nombre + "' ya está en la lista y no se puede repetir.");
+        return;
+    }
 }
