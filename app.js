@@ -17,4 +17,12 @@ if (amigos.includes(nombre)) {
         alert("El nombre '" + nombre + "' ya está en la lista y no se puede repetir.");
         return;
     }
+     amigos.push(nombre);
+
+    let lista = document.getElementById("listaAmigos");
+    let li = document.createElement("li");
+    li.textContent = nombre;
+    lista.appendChild(li);
+
+    input.value = "";
 }
