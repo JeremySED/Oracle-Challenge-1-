@@ -26,3 +26,22 @@ if (amigos.includes(nombre)) {
 
     input.value = "";
 }
+    function sortearAmigo() {
+    let resultado = document.getElementById("resultado");
+    let lista = document.getElementById("listaAmigos");
+
+    if (amigos.length === 0) {
+        alert("No hay nombres en la lista.");
+        return;
+    }
+
+    let indice = Math.floor(Math.random() * amigos.length);
+    let amigoSecreto = amigos[indice];
+
+    resultado.innerHTML = "El amigo secreto sorteado es: " + amigoSecreto;
+
+    lista.innerHTML = "";
+
+    amigos = [];
+}
+
